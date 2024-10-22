@@ -3,6 +3,7 @@ import typing as t
 from src import shared
 from src.enums import State
 from src.game_state import GameState
+from src.main_menu import MainMenu
 
 
 class StateLike(t.Protocol):
@@ -15,9 +16,10 @@ class StateManager:
     def __init__(self) -> None:
         self.state_dict: dict[State, StateLike] = {
             State.GAME: GameState,
+            State.MAIN_MENU: MainMenu,
         }
 
-        shared.next_state = State.GAME
+        shared.next_state = State.MAIN_MENU
         self.state_obj: StateLike = self.state_dict.get(shared.next_state)()
 
     def update(self):
