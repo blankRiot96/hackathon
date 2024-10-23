@@ -14,15 +14,6 @@ class MainMenu:
 
     def draw(self):
         shared.screen.fill(
-            "blue",
-            rect=pygame.Rect(
-                0,
-                0,
-                shared.srect.width / 2,
-                shared.srect.height,
-            ),
-        )
-        shared.screen.fill(
             "red",
             rect=pygame.Rect(
                 shared.srect.width / 2,
