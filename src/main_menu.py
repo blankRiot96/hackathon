@@ -21,3 +21,12 @@ class MainMenu:
                 shared.srect.height,
             ),
         )
+        shared.screen.fill(
+            "red",
+            rect=pygame.Rect(
+                shared.srect.width / 2,
+                0,
+                shared.srect.width / 2,
+                shared.srect.height,
+            ),
+        )
