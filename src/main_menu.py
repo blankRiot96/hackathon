@@ -4,7 +4,8 @@ from src import shared
 
 
 class Button:
-    pass
+    def __init__(self) -> None:
+        pass
 
 
 class MainMenu:
