@@ -1,6 +1,6 @@
 import pygame
 
-from src import shared
+from src import shared, utils
 
 
 class Button:
@@ -9,25 +9,12 @@ class Button:
 
 
 class MainMenu:
+    def __init__(self) -> None:
+        self.spark = utils.MetalExplosion()
+
     def update(self):
-        pass
+        self.spark.check_mouse_spawn()
+        self.spark.update()
 
     def draw(self):
-        shared.screen.fill(
-            "red",
-            rect=pygame.Rect(
-                shared.srect.width / 2,
-                0,
-                shared.srect.width / 2,
-                shared.srect.height,
-            ),
-        )
-        shared.screen.fill(
-            "purple",
-            rect=pygame.Rect(
-                0,
-                0,
-                shared.srect.width,
-                shared.srect.height / 2,
-            ),
-        )
+        self.spark.draw()
