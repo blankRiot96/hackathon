@@ -25,7 +25,7 @@ class MainMenu:
 
 
             (shared.srect.center[0], shared.srect.center[1] + 50),
-            (140, 40),
+            (120, 40),
         )
     def update(self):
         self.button.update()
