@@ -216,7 +216,7 @@ class MetalExplosion:
         self.shockwaves.append(
             ShockWave(
                 pos=pos,
-                duration=2.0,
+                duration=1.7,
                 max_radius=100,
                 starting_width=20,
             )
