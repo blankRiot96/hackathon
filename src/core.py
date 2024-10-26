@@ -31,13 +31,15 @@ class Core:
             if event.type == pygame.QUIT:
                 raise SystemExit
 
+            self.state_manager.state_obj.manager.process_events(event)
+
     def update(self):
         self.get_events()
         self.check_for_exit()
         self.state_manager.update()
 
     def draw(self):
-        shared.screen.fill("black")
+        shared.screen.fill("#1E1E2E")
         self.state_manager.draw()
         pygame.display.flip()
 
