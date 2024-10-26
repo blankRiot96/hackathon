@@ -13,7 +13,7 @@ class MainMenu:
         shared.next_state = None
         self.spark = utils.MetalExplosion()
         self.button = utils.ItalicButton(
-            "Chunky",
+            "Donkey",
             shared.srect.center,
             (140, 40),
         )
