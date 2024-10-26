@@ -13,16 +13,27 @@ class MainMenu:
         shared.next_state = None
         self.spark = utils.MetalExplosion()
         self.button = utils.ItalicButton(
-            "Donkey",
+
+            "Monkey",
+
             shared.srect.center,
             (140, 40),
         )
 
+        self.button2 = utils.ItalicButton(
+            "Donkey",
+
+
+            (shared.srect.center[0], shared.srect.center[1] + 50),
+            (140, 40),
+        )
     def update(self):
         self.button.update()
+        self.button2.update()
         self.spark.check_mouse_spawn()
         self.spark.update()
 
     def draw(self):
         self.button.draw()
+        self.button2.draw()
         self.spark.draw()
