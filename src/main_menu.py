@@ -26,7 +26,7 @@ class MainMenu:
 
         self.profile = ProfileButton()
         self.current = None
-        self.sparks = utils.MetalExplosion()
+        # self.sparks = utils.MetalExplosion()
 
     def update(self):
         self.manager.update(shared.dt)
@@ -43,7 +43,7 @@ class MainMenu:
             self.current.update()
 
         self.sparks.check_mouse_spawn()
-        self.sparks.update()
+        # self.sparks.update()
 
     def draw(self):
         self.manager.draw_ui(shared.screen)
@@ -52,5 +52,5 @@ class MainMenu:
         if self.current is not None:
             self.current.draw()
 
-        self.sparks.draw()
+        # self.sparks.draw()
         pygame.draw.rect(shared.screen, "black", shared.srect, 10)
