@@ -42,7 +42,7 @@ class MainMenu:
         if self.current is not None:
             self.current.update()
 
-        self.sparks.check_mouse_spawn()
+        # self.sparks.check_mouse_spawn()
         # self.sparks.update()
 
     def draw(self):
